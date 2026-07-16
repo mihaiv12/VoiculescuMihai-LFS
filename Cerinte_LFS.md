@@ -2,7 +2,7 @@
 
 ## 1. Descrierea proiectului
 
-Proiectul își propune construirea de la zero a unui sistem de operare Linux funcțional, folosind documentația "Linux From Scratch" (LFS). Acesta presupune compilarea manuală, pas cu pas, a tuturor componentelor esențiale ale sistemului — nucleul Linux, biblioteca C standard, compilatorul, utilitarele de bază și shell-ul — pornind exclusiv de la codul sursă, în interiorul chroot.
+Proiectul își propune construirea de la zero a unui sistem de operare Linux funcțional, folosind documentația "Linux From Scratch" (LFS). Acesta presupune compilarea manuală, pas cu pas, a tuturor componentelor esențiale ale sistemului, nucleul Linux, biblioteca C standard, compilatorul, utilitarele de bază și shell-ul, pornind exclusiv de la codul sursă, în interiorul chroot.
 
 Proiectul este structurat în următoarele etape principale:
 
