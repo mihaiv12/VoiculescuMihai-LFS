@@ -214,7 +214,7 @@ Partea 1: Pregatirea sistemului host
 >
 > bash version-check.sh
 >
-> ![](media/image2.png){width="4.677083333333333in" height="5.65625in"}
+> ![](./media/image3.png){width="4.677083333333333in" height="5.65625in"}
 
 -   sudo apt install g++
 
@@ -226,7 +226,7 @@ Partea 1: Pregatirea sistemului host
 
 -   sudo ln -svf /bin/bash /bin/sh
 
-> ![](media/image3.png){width="4.21875in" height="4.989919072615923in"}
+> ![](./media/image2.png){width="4.21875in" height="4.989919072615923in"}
 
 2.  **Creeare partitie LFS**
 
@@ -236,7 +236,7 @@ Partea 1: Pregatirea sistemului host
 
 -   partitionarea:
 
-> ![](media/image1.png){width="6.5in" height="0.9583333333333334in"}
+> ![](./media/image1.png){width="6.5in" height="0.9583333333333334in"}
 
 -   formatarea partitiilor folosind:
 
@@ -294,4 +294,50 @@ Partea 1: Pregatirea sistemului host
 
 5.  **Toolchains**
 
--   
+-   Binutils-2.46.0 - Pass 1
+
+-   GCC-15.2.0 - Pass 1
+
+-   Linux-6.18.10 API Headers
+
+-   Glibc-2.43
+
+-   Libstdc++ from GCC-15.2.0
+
+-   dezarhivez fișierele pentru fiecare si folosesc comenzile make si make install dupa creearea unui folder temporar "build"
+
+6.  **Temporary tools**
+
+-   M4-1.4.21
+
+-   Ncurses-6.6
+
+-   Bash-5.3
+
+-   Coreutils-9.10
+
+-   Diffutils-3.12
+
+-   File-5.46
+
+-   Findutils-4.10.0
+
+-   Gawk-5.3.2
+
+-   Grep-3.12
+
+-   Gzip-1.14
+
+-   Make-4.4.1
+
+-   Patch-2.8
+
+-   Sed-4.9
+
+-   Tar-1.35
+
+-   Xz-5.8.2
+
+-   Binutils-2.46.0 - Pass 2
+
+-   GCC-15.2.0 - Pass 2
