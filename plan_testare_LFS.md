@@ -4,7 +4,7 @@
 
 **Tip document:** Plan de Testare (PT)
 
-**Organizație:** Academia Tehnica Militara
+**Organizație:** Academia Tehnica Militara "Ferdinand I"
 
 **Grupă:** C-112C
 
