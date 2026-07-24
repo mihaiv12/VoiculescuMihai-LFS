@@ -144,19 +144,8 @@ Fiind vorba despre teste de verificare, rulate integral dintr-o singură sesiune
 | Rezultat obținut | _(se completează în timpul testării)_ |
 | Observații | _(se completează în timpul testării)_ |
 | Calificativ test | ☐ PASS &nbsp;&nbsp;&nbsp; ☐ FAILED |
-#### TC-06
-**Titlu:** Verificarea instalării Binutils Pass 2 și GCC Pass 2
-| Element | Descriere |
-|---|---|
-| Cerința DCS | Cerința 6.2 - Binutils-2.46.0 și GCC-15.2.0 (Pass 2) trebuie să fie instalate, finalizând toolchain-ul izolat |
-| Referință DCS | DCS al proiectului „Construire sistem LFS”, versiunea 1.0, capitolul 6 - Cerințe privind uneltele temporare |
-| Modalitate de testare | Pasul 1. Se rulează `x86_64-lfs-linux-gnu-gcc --version` și se verifică versiunea 15.2.0.<br>Pasul 2. Se recompilează programul `test.c` din TC-04 folosind acest compilator și se verifică din nou interpretorul cu `readelf -l`.<br>Pasul 3. Se verifică data de modificare a binarelor (`ls -l /usr/bin/x86_64-lfs-linux-gnu-gcc`) pentru a confirma că sunt cele rezultate din Pass 2, nu din Pass 1. |
-| Rezultat așteptat | Compilatorul instalat este versiunea 15.2.0 din Pass 2, recompilarea programului de test reușește fără erori, iar interpretorul rămâne corect. |
-| Rezultat obținut | _(se completează în timpul testării)_ |
-| Observații | _(se completează în timpul testării)_ |
-| Calificativ test | ☐ PASS &nbsp;&nbsp;&nbsp; ☐ FAILED |
 ### 2.5. LFS Cap. 7 - Construirea uneltelor temporare suplimentare
-#### TC-07
+#### TC-06
 **Titlu:** Verificarea proprietarului ierarhiei rădăcină și a montării sistemelor de fișiere virtuale pe sistemul bootat
 | Element | Descriere |
 |---|---|
@@ -167,7 +156,7 @@ Fiind vorba despre teste de verificare, rulate integral dintr-o singură sesiune
 | Rezultat obținut | _(se completează în timpul testării)_ |
 | Observații | _(se completează în timpul testării)_ |
 | Calificativ test | ☐ PASS &nbsp;&nbsp;&nbsp; ☐ FAILED |
-#### TC-08
+#### TC-07
 **Titlu:** Verificarea existenței uneltelor suplimentare instalate (Gettext, Bison, Perl, Python, Texinfo, Util-linux)
 | Element | Descriere |
 |---|---|
@@ -179,7 +168,7 @@ Fiind vorba despre teste de verificare, rulate integral dintr-o singură sesiune
 | Observații | _(se completează în timpul testării)_ |
 | Calificativ test | ☐ PASS &nbsp;&nbsp;&nbsp; ☐ FAILED |
 ### 2.6. LFS Cap. 8 - Instalarea software-ului de bază al sistemului
-#### TC-09
+#### TC-08
 **Titlu:** Verificarea toolchain-ului final (Glibc, GCC, Binutils) instalat pe sistem
 | Element | Descriere |
 |---|---|
@@ -190,7 +179,7 @@ Fiind vorba despre teste de verificare, rulate integral dintr-o singură sesiune
 | Rezultat obținut | _(se completează în timpul testării)_ |
 | Observații | _(se completează în timpul testării)_ |
 | Calificativ test | ☐ PASS &nbsp;&nbsp;&nbsp; ☐ FAILED |
-#### TC-10
+#### TC-09
 **Titlu:** Verificarea instalării și funcționării Systemd și D-Bus
 | Element | Descriere |
 |---|---|
@@ -202,7 +191,7 @@ Fiind vorba despre teste de verificare, rulate integral dintr-o singură sesiune
 | Observații | _(se completează în timpul testării)_ |
 | Calificativ test | ☐ PASS &nbsp;&nbsp;&nbsp; ☐ FAILED |
 ### 2.7. LFS Cap. 9 - Configurarea sistemului
-#### TC-11
+#### TC-10
 **Titlu:** Verificarea fișierelor de configurare a rețelei, localei și consolei
 | Element | Descriere |
 |---|---|
@@ -213,7 +202,7 @@ Fiind vorba despre teste de verificare, rulate integral dintr-o singură sesiune
 | Rezultat obținut | _(se completează în timpul testării)_ |
 | Observații | _(se completează în timpul testării)_ |
 | Calificativ test | ☐ PASS &nbsp;&nbsp;&nbsp; ☐ FAILED |
-#### TC-12
+#### TC-11
 **Titlu:** Verificarea fișierelor de configurare Systemd și a hostname-ului
 | Element | Descriere |
 |---|---|
@@ -225,7 +214,7 @@ Fiind vorba despre teste de verificare, rulate integral dintr-o singură sesiune
 | Observații | _(se completează în timpul testării)_ |
 | Calificativ test | ☐ PASS &nbsp;&nbsp;&nbsp; ☐ FAILED |
 ### 2.8. LFS Cap. 10 - Realizarea sistemului LFS bootabil
-#### TC-13
+#### TC-12
 **Titlu:** Verificarea /etc/fstab și a kernelului Linux compilat, aflat în execuție
 | Element | Descriere |
 |---|---|
@@ -236,7 +225,7 @@ Fiind vorba despre teste de verificare, rulate integral dintr-o singură sesiune
 | Rezultat obținut | _(se completează în timpul testării)_ |
 | Observații | _(se completează în timpul testării)_ |
 | Calificativ test | ☐ PASS &nbsp;&nbsp;&nbsp; ☐ FAILED |
-#### TC-14
+#### TC-13
 **Titlu:** Verificarea instalării și configurării GRUB
 | Element | Descriere |
 |---|---|
@@ -248,7 +237,7 @@ Fiind vorba despre teste de verificare, rulate integral dintr-o singură sesiune
 | Observații | _(se completează în timpul testării)_ |
 | Calificativ test | ☐ PASS &nbsp;&nbsp;&nbsp; ☐ FAILED |
 ### 2.9. LFS Cap. 11 - Finalul
-#### TC-15
+#### TC-14
 **Titlu:** Verificarea faptului că sistemul LFS rulează stabil și independent, folosind kernelul și bootloader-ul instalate
 | Element | Descriere |
 |---|---|
