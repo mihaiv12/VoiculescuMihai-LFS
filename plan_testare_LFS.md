@@ -127,7 +127,7 @@ Fiind vorba despre teste de verificare, rulate integral dintr-o singură sesiune
 |---|---|
 | Cerința DCS | Cerința 5.1 - Toolchain-ul construit (Binutils + GCC + Glibc) trebuie să fie funcțional și capabil să compileze și să lege corect un program C simplu |
 | Referință DCS | DCS al proiectului „Construire sistem LFS”, versiunea 1.0, capitolul 5 - Cerințe privind toolchain-ul |
-| Modalitate de testare | Pasul 1. Din sesiunea de pe sistemul bootat, se creează un fișier sursă `test.c` cu un program minimal (ex. „Hello, world!”).<br>Pasul 2. Se compilează cu `x86_64-lfs-linux-gnu-gcc test.c -o test` (unealta se găsește direct în `/usr/bin`, fiind în `$PATH`).<br>Pasul 3. Se verifică arhitectura binarului cu `readelf -l test` și se caută linia „Program interpreter”.<br>Pasul 4. Se confirmă că interpretorul indicat este linkerul dinamic prezent pe sistem (`/lib64/ld-linux-x86-64.so.2`).<br>Pasul 5. Se execută binarul rezultat și se verifică codul de ieșire. |
+| Modalitate de testare | Pasul 1. Din sesiunea de pe sistemul bootat, se creează un fișier sursă `test.c` cu un program minimal (ex. „Hello, world!”).<br>Pasul 2. Se compilează cu `gcc test.c -o test` (unealta se găsește direct în `/usr/bin`, fiind în `$PATH`).<br>Pasul 3. Se verifică arhitectura binarului cu `readelf -l test` și se caută linia „Program interpreter”.<br>Pasul 4. Se confirmă că interpretorul indicat este linkerul dinamic prezent pe sistem (`/lib64/ld-linux-x86-64.so.2`).<br>Pasul 5. Se execută binarul rezultat și se verifică codul de ieșire. |
 | Rezultat așteptat | Compilarea reușește fără erori, se generează executabilul `test`, interpretorul raportat de `readelf -l` este cel prezent pe sistem, iar executarea returnează codul de ieșire 0. |
 | Rezultat obținut | _(se completează în timpul testării)_ |
 | Observații | _(se completează în timpul testării)_ |
@@ -169,17 +169,6 @@ Fiind vorba despre teste de verificare, rulate integral dintr-o singură sesiune
 | Calificativ test | ☐ PASS &nbsp;&nbsp;&nbsp; ☐ FAILED |
 ### 2.6. LFS Cap. 8 - Instalarea software-ului de bază al sistemului
 #### TC-08
-**Titlu:** Verificarea toolchain-ului final (Glibc, GCC, Binutils) instalat pe sistem
-| Element | Descriere |
-|---|---|
-| Cerința DCS | Cerința 8.1 - Glibc-2.43 și GCC-15.2.0 (varianta finală) trebuie să fie instalate, alături de Binutils-2.46.0 final, formând toolchain-ul definitiv al sistemului |
-| Referință DCS | DCS al proiectului „Construire sistem LFS”, versiunea 1.0, capitolul 8 - Cerințe privind software-ul de bază |
-| Modalitate de testare | Pasul 1. Se rulează `gcc --version` (fără prefix cross) și se verifică versiunea 15.2.0.<br>Pasul 2. Se verifică existența `/lib64/ld-linux-x86-64.so.2` (linker-ul dinamic final al Glibc).<br>Pasul 3. Se recompilează programul `test.c` cu `gcc` (fără prefix) și se verifică `readelf -l` pentru interpretorul final. |
-| Rezultat așteptat | `gcc --version` confirmă 15.2.0, linker-ul dinamic final există, iar compilarea programului de test produce un binar cu interpretorul `/lib64/ld-linux-x86-64.so.2`. |
-| Rezultat obținut | _(se completează în timpul testării)_ |
-| Observații | _(se completează în timpul testării)_ |
-| Calificativ test | ☐ PASS &nbsp;&nbsp;&nbsp; ☐ FAILED |
-#### TC-09
 **Titlu:** Verificarea instalării și funcționării Systemd și D-Bus
 | Element | Descriere |
 |---|---|
@@ -191,7 +180,7 @@ Fiind vorba despre teste de verificare, rulate integral dintr-o singură sesiune
 | Observații | _(se completează în timpul testării)_ |
 | Calificativ test | ☐ PASS &nbsp;&nbsp;&nbsp; ☐ FAILED |
 ### 2.7. LFS Cap. 9 - Configurarea sistemului
-#### TC-10
+#### TC-09
 **Titlu:** Verificarea fișierelor de configurare a rețelei, localei și consolei
 | Element | Descriere |
 |---|---|
@@ -202,7 +191,7 @@ Fiind vorba despre teste de verificare, rulate integral dintr-o singură sesiune
 | Rezultat obținut | _(se completează în timpul testării)_ |
 | Observații | _(se completează în timpul testării)_ |
 | Calificativ test | ☐ PASS &nbsp;&nbsp;&nbsp; ☐ FAILED |
-#### TC-11
+#### TC-10
 **Titlu:** Verificarea fișierelor de configurare Systemd și a hostname-ului
 | Element | Descriere |
 |---|---|
@@ -214,7 +203,7 @@ Fiind vorba despre teste de verificare, rulate integral dintr-o singură sesiune
 | Observații | _(se completează în timpul testării)_ |
 | Calificativ test | ☐ PASS &nbsp;&nbsp;&nbsp; ☐ FAILED |
 ### 2.8. LFS Cap. 10 - Realizarea sistemului LFS bootabil
-#### TC-12
+#### TC-11
 **Titlu:** Verificarea /etc/fstab și a kernelului Linux compilat, aflat în execuție
 | Element | Descriere |
 |---|---|
@@ -225,7 +214,7 @@ Fiind vorba despre teste de verificare, rulate integral dintr-o singură sesiune
 | Rezultat obținut | _(se completează în timpul testării)_ |
 | Observații | _(se completează în timpul testării)_ |
 | Calificativ test | ☐ PASS &nbsp;&nbsp;&nbsp; ☐ FAILED |
-#### TC-13
+#### TC-12
 **Titlu:** Verificarea instalării și configurării GRUB
 | Element | Descriere |
 |---|---|
@@ -237,7 +226,7 @@ Fiind vorba despre teste de verificare, rulate integral dintr-o singură sesiune
 | Observații | _(se completează în timpul testării)_ |
 | Calificativ test | ☐ PASS &nbsp;&nbsp;&nbsp; ☐ FAILED |
 ### 2.9. LFS Cap. 11 - Finalul
-#### TC-14
+#### TC-13
 **Titlu:** Verificarea faptului că sistemul LFS rulează stabil și independent, folosind kernelul și bootloader-ul instalate
 | Element | Descriere |
 |---|---|
