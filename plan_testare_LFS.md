@@ -231,7 +231,7 @@ Fiind vorba despre teste de verificare, rulate integral dintr-o singură sesiune
 |---|---|
 | Cerința DCS | Cerința 10.2 - Bootloader-ul GRUB-2.14 trebuie să fie instalat pe disc, iar `/boot/grub/grub.cfg` trebuie să conțină configurația necesară pornirii sistemului LFS |
 | Referință DCS | DCS al proiectului „Construire sistem LFS”, versiunea 1.0, capitolul 10 - Cerințe privind boot-ul sistemului |
-| Modalitate de testare | Pasul 1. Se verifică existența directorului `/boot/grub` și a fișierelor sale (module GRUB).<br>Pasul 2. Se rulează `cat /boot/grub/grub.cfg` și se verifică prezența unei intrări de meniu pentru kernelul confirmat la TC-13.<br>Pasul 3. Se confirmă indirect funcționarea GRUB prin faptul că sistemul curent a fost pornit cu succes prin acesta (sesiunea activă este dovada rulării). |
+| Modalitate de testare | Pasul 1. Se verifică existența directorului `/boot/grub` și a fișierelor sale (module GRUB).<br>Pasul 2. Se rulează `cat /boot/grub/grub.cfg` și se verifică prezența unei intrări de meniu pentru kernelul confirmat anterior.<br>Pasul 3. Se confirmă indirect funcționarea GRUB prin faptul că sistemul curent a fost pornit cu succes prin acesta (sesiunea activă este dovada rulării). |
 | Rezultat așteptat | `/boot/grub` conține fișierele de instalare GRUB, iar `/boot/grub/grub.cfg` conține cel puțin o intrare de meniu validă, care pointează către kernelul și `initramfs`-ul instalate și confirmate ca fiind cele în execuție. |
 | Rezultat obținut | _(se completează în timpul testării)_ |
 | Observații | _(se completează în timpul testării)_ |
