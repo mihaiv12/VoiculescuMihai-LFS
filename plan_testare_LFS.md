@@ -1,13 +1,11 @@
 # Plan de Testare
 **Denumirea proiectului:** Construirea unui sistem de operare Linux de la zero folosind documentația Linux From Scratch (LFS), ediția stable-systemd (versiunea 13.0-systemd)
 **Tip document:** Plan de Testare (PT)
-<<<<<<< HEAD
 **Organizație:** Academia Tehnica Militara "Ferdinand I"
 =======
 
 **Organizație:** Academia Tehnica Militara "Ferdinand I"
 
->>>>>>> 7e842ac66458bea6cdadfbbfe97e8ddeb20072be
 **Grupă:** C-112C
 **Contribuitori:**
 | Nume și prenume | Rol | Contact |
